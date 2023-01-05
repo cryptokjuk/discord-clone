@@ -7,8 +7,9 @@ interface Props {
 }
  function SignInComponent({ providers }: Props) {
   const error = [{ name: "error", id: "error" }];
- 
+  console.log(providers)
   return (
+  
     <div className="login__hero1">
      {Object.values(providers! || error).map((provider) => (
         <div key={provider.name}>
