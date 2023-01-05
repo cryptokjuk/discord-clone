@@ -6,7 +6,7 @@ export const authOptions: NextAuthOptions = {
     // OAuth authentication providers
 
     GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID!,
+      clientId: "309223414456-rn1itu1fti2qsmk2jldme1pia5395a84.apps.googleusercontent.com",
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
     }),
     // Sign in with passwordless email link
