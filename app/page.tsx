@@ -4,14 +4,19 @@ import "../styles/globals.css";
 import SidebarLeft from "./SidebarLeft";
 import SidebarRight from "./SidebarRight";
 import { unstable_getServerSession } from "next-auth";
+import ProvidersWrapper from "./ProvidersWrapper";
 
-function HomePage() {
+ async function HomePage() {
+  const session = await unstable_getServerSession();
   return (
-    <div id="container">
-      <SidebarLeft />
-      <SidebarRight />
-      <MainContent />
-    </div>
+    <ProvidersWrapper>
+      <div id="container">
+
+        <SidebarLeft />
+        <SidebarRight />
+        <MainContent />
+      </div>
+    </ProvidersWrapper>
   );
 }
 
