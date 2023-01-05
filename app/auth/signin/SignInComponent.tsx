@@ -17,7 +17,7 @@ interface Props {
           className="login__button"
             onClick={() =>
               signIn(provider.id, {
-                callbackUrl: "/",
+                callbackUrl: process.env.VERCEL_URL,
               })
             }
           >
