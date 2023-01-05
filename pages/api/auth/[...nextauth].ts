@@ -1,7 +1,7 @@
-import NextAuth from "next-auth";
+import NextAuth, { NextAuthOptions } from "next-auth"
 import GoogleProvider from "next-auth/providers/google";
 
-  export const authOptions = {
+export const authOptions: NextAuthOptions = {
   providers: [
     // OAuth authentication providers
 
@@ -11,7 +11,7 @@ import GoogleProvider from "next-auth/providers/google";
     }),
     // Sign in with passwordless email link
   ],
-  secret: process.env.NEXTAUTH_SECRET!,
+ // secret: process.env.NEXTAUTH_SECRET!,
   pages: {
     signIn: "/auth/signin",
   },

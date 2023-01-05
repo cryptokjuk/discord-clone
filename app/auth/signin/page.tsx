@@ -1,4 +1,3 @@
-import React from "react";
 import { getProviders } from "next-auth/react";
 import SignInComponent from "./SignInComponent";
 import "../../../styles/globals.css";

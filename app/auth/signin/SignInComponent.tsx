@@ -2,20 +2,21 @@
 import { getProviders, signIn } from "next-auth/react";
 import "../../../styles/globals.css"
 
-type Props = {
+interface Props {
   providers: Awaited<ReturnType<typeof getProviders>>;
-};
-
-function SignInComponent({ providers }: Props) {
+}
+ function SignInComponent({ providers }: Props) {
+  const error = [{ name: "error", id: "error" }];
+ 
   return (
     <div className="login__hero1">
-      {Object.values(providers!).map((provider) => (
+     {Object.values(providers! || error).map((provider) => (
         <div key={provider.name}>
           <button
           className="login__button"
             onClick={() =>
               signIn(provider.id, {
-                callbackUrl: process.env.VERCEL_URL || "http://localhost:3000",
+                callbackUrl: "/",
               })
             }
           >
