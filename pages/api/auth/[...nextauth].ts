@@ -11,7 +11,7 @@ export const authOptions: NextAuthOptions = {
     }),
     // Sign in with passwordless email link
   ],
- // secret: process.env.NEXTAUTH_SECRET!,
+  //secret: process.env.NEXTAUTH_SECRET!,
   pages: {
     signIn: "/auth/signin",
   },

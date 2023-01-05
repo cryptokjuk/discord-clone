@@ -10,7 +10,7 @@ interface Props {
  
   return (
     <div className="login__hero1">
-     {Object.values(providers! || error).map((provider) => (
+     {Object.values(providers!).map((provider) => (
         <div key={provider.name}>
           <button
           className="login__button"
